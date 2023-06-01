@@ -42,8 +42,7 @@ int main(int argc, char *argv[]) {
     // командный аргумент help
     if (strcmp(difficulty, "help") == 0) {
         print_help();
-        printf('\n');
-        printf("input example: .\\main.exe easy 250 10");
+        printf("\ninput example: .\\main.exe easy 250 10");
         exit(1);
     }
     
