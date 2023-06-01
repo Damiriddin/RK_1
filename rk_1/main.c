@@ -38,9 +38,7 @@ void gotoxy(int x, int y) {
 int main(int argc, char *argv[]) {
 
     char *difficulty = argv[1]; // сложность
-    int time_limit = atoi(argv[2]); //ограничение по времени 
-    int max_errors = atoi(argv[3]); // ограничение по ошибкам 
-
+    
     // командный аргумент help
     if (strcmp(difficulty, "help") == 0) {
         print_help();
@@ -48,7 +46,10 @@ int main(int argc, char *argv[]) {
         printf("input example: .\\main.exe easy 250 10");
         exit(1);
     }
-
+    
+ 
+    int time_limit = atoi(argv[2]); //ограничение по времени 
+    int max_errors = atoi(argv[3]); // ограничение по ошибкам 
 
     // проверяем количество входных аргументов
     if (argc != 4) {
@@ -148,5 +149,5 @@ int main(int argc, char *argv[]) {
     }
     // С ПОБЕДОЙ!
      printf("\nCongratulations! You typed the text correctly!\n");
-    exit(0);
+    return 0;
 }
